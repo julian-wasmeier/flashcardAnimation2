@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { useSpring, animated, config, useChain } from "react-spring";
 import styles from "./Card.module.css";
 
-function Card(props) {
+function Test(props) {
   const [disabled, setDisabled] = useState(false);
 
   const upRef = useRef();
@@ -76,4 +76,4 @@ function Card(props) {
   );
 }
 
-export default Card;
+export default Test;

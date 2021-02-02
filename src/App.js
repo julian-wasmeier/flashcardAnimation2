@@ -2,6 +2,8 @@ import "./App.css";
 import styles from "./components/Card.module.css";
 import { useState } from "react";
 import Card from "./components/Card";
+import Test from "./components/Test";
+
 function App() {
   const items = [
     { id: 1, title: "Jan" },
@@ -30,7 +32,7 @@ function App() {
       </button>
       {items.map((item, index) => (
         <Card
-          current={current}
+          curr={current}
           index={index}
           id={item.id}
           title={item.title}
