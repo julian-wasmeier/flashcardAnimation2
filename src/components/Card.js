@@ -10,14 +10,15 @@ function Card(props) {
     config: { ...config.stiff, friction: 40 },
     transform:
       props.curr <= props.id
-        ? "translate(20px,-20px) scale(1)"
-        : "translate(0px, 0px) scale(1)",
+        ? "translate(25px,-25px) "
+        : "translate(0px, 0px) ",
     ref: upRef,
   });
 
   const leaveRef = useRef();
   const leave = useSpring({
-    config: { friction: 50, tension: 200, mass: 5 },
+    // config: { friction: 50, tension: 200, mass: 5 },
+    config: { ...config.stiff, friction: 48, mass: 5, tension: 200 },
 
     marginLeft: props.curr <= props.id ? 1000 : 0,
 
@@ -36,7 +37,7 @@ function Card(props) {
     props.curr <= props.id
       ? [upRef, leaveRef, fadeRef]
       : [leaveRef, fadeRef, upRef],
-    [0, 0.3, 0.3]
+    [0, 0.2, 0.2]
   );
 
   const nextHandler2 = () => {
