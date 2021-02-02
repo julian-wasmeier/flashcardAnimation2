@@ -50,10 +50,10 @@
   cursor: pointer;
 }
 
-.nextButton[disabled]:hover,
+/* .nextButton[disabled]:hover,
 .prevButton[disabled]:hover {
   background: none;
-}
+} */
 .cardContainer h1 {
   text-align: center;
   margin: 10px;

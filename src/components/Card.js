@@ -7,6 +7,7 @@ function Card(props) {
 
   const upRef = useRef();
   const up = useSpring({
+    config: { ...config.gentle },
     transform:
       props.curr <= props.id ? "translate(20px,20px)" : "translate(0px, 0px)",
     ref: upRef,
@@ -14,7 +15,7 @@ function Card(props) {
 
   const leaveRef = useRef();
   const leave = useSpring({
-    // config: { friction: 200, tension: 200, mass: 4 },
+    config: { friction: 200, tension: 200, mass: 4 },
     config: { duration: 600 },
 
     marginLeft: props.curr <= props.id ? 1000 : 0,
@@ -39,8 +40,14 @@ function Card(props) {
 
   const nextHandler2 = () => {
     props.nextHandler();
-    setDisabled(true);
+    // setDisabled(true); broken
   };
+
+  const prevHandler2 = () => {
+    props.prevHandler();
+    // setDisabled(false); broken
+  };
+
   return (
     <animated.div
       id="cardCon"
@@ -57,17 +64,13 @@ function Card(props) {
         </p>
       </div>
       <div className={styles.buttonContainer}>
-        <button
-          disabled={disabled}
-          className={styles.nextButton}
-          onClick={nextHandler2}
-        >
+        <button className={styles.nextButton} onClick={nextHandler2}>
           NEXT
         </button>
         <button
-          disabled={disabled}
+          disabled={props.itemsLength == props.id}
           className={styles.prevButton}
-          onClick={props.prevHandler}
+          onClick={prevHandler2}
         >
           PREV
         </button>

@@ -27,11 +27,18 @@ function App() {
   console.log(current);
   return (
     <div className="App">
-      <button className="prevButton" onClick={prevHandler}>
+      <button
+        disabled={current == items.length + 1}
+        className="prevButton"
+        onClick={prevHandler}
+      >
         PREV
       </button>
       {items.map((item, index) => (
         <Card
+          itemsLength={items.length}
+          disabledPrev={current == items.length + 1}
+          disabledNext={current == 1}
           curr={current}
           index={index}
           id={item.id}
@@ -40,7 +47,11 @@ function App() {
           prevHandler={prevHandler}
         ></Card>
       ))}
-      <button className="nextButton" onClick={nextHandler}>
+      <button
+        disabled={current == 1}
+        className="nextButton"
+        onClick={nextHandler}
+      >
         NEXT
       </button>
     </div>
