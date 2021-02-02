@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/flashcardAnimation2/static/css/main.8454241c.chunk.css",
+    "main.js": "/flashcardAnimation2/static/js/main.0d9e365d.chunk.js",
+    "main.js.map": "/flashcardAnimation2/static/js/main.0d9e365d.chunk.js.map",
+    "runtime-main.js": "/flashcardAnimation2/static/js/runtime-main.2b5c6347.js",
+    "runtime-main.js.map": "/flashcardAnimation2/static/js/runtime-main.2b5c6347.js.map",
+    "static/js/2.a7d18de8.chunk.js": "/flashcardAnimation2/static/js/2.a7d18de8.chunk.js",
+    "static/js/2.a7d18de8.chunk.js.map": "/flashcardAnimation2/static/js/2.a7d18de8.chunk.js.map",
+    "index.html": "/flashcardAnimation2/index.html",
+    "static/css/main.8454241c.chunk.css.map": "/flashcardAnimation2/static/css/main.8454241c.chunk.css.map",
+    "static/js/2.a7d18de8.chunk.js.LICENSE.txt": "/flashcardAnimation2/static/js/2.a7d18de8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2b5c6347.js",
+    "static/js/2.a7d18de8.chunk.js",
+    "static/css/main.8454241c.chunk.css",
+    "static/js/main.0d9e365d.chunk.js"
+  ]
+}
