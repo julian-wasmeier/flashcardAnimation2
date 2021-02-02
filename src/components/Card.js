@@ -17,8 +17,7 @@ function Card(props) {
 
   const leaveRef = useRef();
   const leave = useSpring({
-    config: { friction: 200, tension: 200, mass: 4 },
-    config: { duration: 600 },
+    config: { friction: 50, tension: 200, mass: 5 },
 
     marginLeft: props.curr <= props.id ? 1000 : 0,
 
@@ -36,7 +35,7 @@ function Card(props) {
   useChain(
     props.curr <= props.id
       ? [upRef, leaveRef, fadeRef]
-      : [leaveRef, upRef, fadeRef],
+      : [leaveRef, fadeRef, upRef],
     [0, 0.3, 0.3]
   );
 
