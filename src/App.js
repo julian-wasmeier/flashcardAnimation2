@@ -12,7 +12,9 @@ function App() {
   const [current, setCurrent] = useState(items.length + 1);
 
   const nextHandler = () => {
-    setCurrent((prev) => prev - 1);
+    if (current > 1) {
+      setCurrent((prev) => prev - 1);
+    }
   };
 
   const prevHandler = () => {
