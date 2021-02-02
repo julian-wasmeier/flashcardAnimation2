@@ -7,9 +7,11 @@ function Card(props) {
 
   const upRef = useRef();
   const up = useSpring({
-    config: { ...config.gentle },
+    config: { ...config.stiff, friction: 40 },
     transform:
-      props.curr <= props.id ? "translate(20px,20px)" : "translate(0px, 0px)",
+      props.curr <= props.id
+        ? "translate(20px,-20px) scale(1)"
+        : "translate(0px, 0px) scale(1)",
     ref: upRef,
   });
 
