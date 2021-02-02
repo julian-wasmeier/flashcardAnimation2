@@ -6,40 +6,26 @@
 
 body {
   overflow: hidden;
-  background: rgb(185, 85, 85);
+  background: #a4a6a8;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 
 p {
   margin: 1rem;
 }
 
-.container {
-  position: absolute;
-  top: 20%;
-  left: 40%;
-  border-radius: 1rem;
-  height: 400px;
-  width: 200px;
-  background-color: white;
-  border: 2px solid black;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.26);
-}
-
-.container button {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  border: 2px solid black;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.container button:hover {
+.nextButton:hover,
+.prevButton:hover {
   background: rgb(33, 177, 177);
   cursor: pointer;
 }
 
-.container h1 {
-  text-align: center;
-  margin: 10px;
+.nextButton,
+.prevButton {
+  border: 2px solid black;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
 }
