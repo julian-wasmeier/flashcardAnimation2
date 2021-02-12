@@ -16,6 +16,11 @@ p {
   margin: 1rem;
 }
 
+.cardStack {
+  position: relative;
+  left: -8vh;
+}
+
 .nextButton:hover,
 .prevButton:hover {
   background: rgb(33, 177, 177);

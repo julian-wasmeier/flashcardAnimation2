@@ -4,42 +4,31 @@
   padding: 0;
 }
 
-.nextButton {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  border: 2px solid black;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.prevButton {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  border: 2px solid black;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
 .cardContainer {
   position: absolute;
-
-  top: 20%;
-  left: 40%;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
   border-radius: 1rem;
-  height: 450px;
-  width: 350px;
+  height: 60vh;
+  width: 25vw;
   background-color: #a9cae4;
   border: none;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.26);
+  background-image: url("../imgs/card.jpg");
+  background-size: cover;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: space-around;
 }
 
 .nextButton,
-.prevButton {
+.prevButton,
+.husoButton {
   border: 2px solid black;
   margin: 1rem;
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 0.5rem;
 }
 
@@ -50,11 +39,21 @@
   cursor: pointer;
 }
 
+button:focus {
+  outline: none;
+}
+
 /* .nextButton[disabled]:hover,
 .prevButton[disabled]:hover {
   background: none;
 } */
 .cardContainer h1 {
   text-align: center;
-  margin: 10px;
+  margin: 10px 0 1px 0;
+}
+
+.cardContainer p {
+  font-size: 20px;
+  line-height: 27px;
+  margin: 0 10px;
 }
