@@ -28,14 +28,14 @@ function App() {
 
   const handler = isForward ? nextHandler : prevHandler;
 
-  // useEffect(() => {
-  //   const infinite1 = setInterval(() => {
-  //     handler();
-  //   }, 850);
-  //   return function cleanup() {
-  //     clearInterval(infinite1);
-  //   };
-  // }, [isForward]);
+  useEffect(() => {
+    const infinite1 = setInterval(() => {
+      handler();
+    }, 850);
+    return function cleanup() {
+      clearInterval(infinite1);
+    };
+  }, [isForward]);
 
   return (
     <div className="App">
